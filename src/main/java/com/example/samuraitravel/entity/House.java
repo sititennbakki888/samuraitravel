@@ -50,4 +50,3 @@ public class House {
 	private Timestamp updatedAt;
 }
 
-
