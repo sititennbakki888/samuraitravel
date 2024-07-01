@@ -55,6 +55,9 @@ footer{
 .samuraitravel-pagelink:hover{
 	color: #407784;
 }
+.samuraitravel-dropdown-item:active{
+	background-color: #5196a6;
+}
 .samuraitravel-active{
 	background-color: #5196a6 !important;
 	border-color: #5196a6 !important;
