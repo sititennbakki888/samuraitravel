@@ -69,7 +69,7 @@ public class AuthController {
 		return "redirect:/";
 	}
 	
-	@GetMapping("/signup/verfy")
+	@GetMapping("/signup/verify")
 	public String verify(@RequestParam(name = "token") String token, Model model) {
 		VerificationToken verificationToken = verificationTokenService.getVerificationToken(token);
 		
@@ -78,6 +78,9 @@ public class AuthController {
 			userService.enableUser(user);
 			String successMessage = "会員登録が完了しました。";
 			model.addAttribute("successMessage", successMessage);
+			} else {
+				String errorMessage = "トークンが無効です。";
+				model.addAttribute("errorMessage", errorMessage);
 			}
 		return "auth/verify";
 	}
